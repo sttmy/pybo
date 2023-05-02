@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <title>Hello, pybo!</title>
+</head>
+<body>
+    <!-- 네비게이션바 -->
+    {% include "navbar.html" %}
+    <!-- 기본 템플릿 안에 삽입될 내용 START-->
+    {% block content %}
+    {% endblock %}
+    <!-- 기본 템플릿 안에 삽입될 내용 END-->
+
+    <!-- Bootstrap JS -->
+    <script src = "{% static 'jquery-3.4.1.min.js' %}"></script>
+    <script src = "{% static 'bootstrap.min.js' %}"></script>
+    <!-- 자바스크립트 Start -->
+    {% block script %}
+    {% endblock %}
+    <!-- 자바스크립트 End -->
+</body>
+</html>
